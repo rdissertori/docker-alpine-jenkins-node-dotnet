@@ -1,5 +1,7 @@
 FROM rdissertori/jenkins-slave
 
+ENV DOTNET_CLI_TELEMETRY_OPTOUT 1
+
 USER root
 RUN curl -sL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.asc.gpg \
   && mv microsoft.asc.gpg /etc/apt/trusted.gpg.d/ \
