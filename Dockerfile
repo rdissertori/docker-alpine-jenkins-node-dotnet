@@ -1,7 +1,6 @@
 FROM rdissertori/jenkins-slave
 
 USER root
-COPY /install.sh /tmp/install.sh
 RUN curl -sL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.asc.gpg \
   && mv microsoft.asc.gpg /etc/apt/trusted.gpg.d/ \
   && wget -q https://packages.microsoft.com/config/debian/9/prod.list \
