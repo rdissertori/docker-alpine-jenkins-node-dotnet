@@ -12,7 +12,7 @@ RUN curl -sL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor >
   && echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ stretch main" > /etc/apt/sources.list.d/azure-cli.list \
   && apt-get update -qqy \
   && apt-get install --fix-missing \
-  && apt-get install -y --no-install-recommends apt-transport-https lsb-release software-properties-common dirmngr \
+  && apt-get install -y --no-install-recommends lsb-release software-properties-common dirmngr \
   && apt-get install -y dotnet-sdk-2.2 powershell azure-cli \
   && rm -rf /var/lib/apt/lists/* \
   && rm -rf /tmp/* \
