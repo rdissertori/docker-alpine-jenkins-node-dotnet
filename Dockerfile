@@ -1,4 +1,4 @@
-FROM rdissertori/jenkins-slave
+FROM rdissertori/alpine-jenkins-node-base
 
 ENV DOTNET_CLI_TELEMETRY_OPTOUT 1
 
