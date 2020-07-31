@@ -9,7 +9,7 @@ python3 libffi openssl \
 && rm -rf /tmp/* \
 && chown -R jenkins:jenkins /home/jenkins
 # dotnet sdk
-ADD https://dot.net/v1/dotnet-install.sh /root/
+ADD https://dot.net/v1/dotnet-install.sh .
 RUN chmod +x ./dotnet-install.sh && sh ./dotnet-install.sh -c Current
 # powershell
 RUN apk -X https://dl-cdn.alpinelinux.org/alpine/edge/main add --no-cache lttng-ust \
