@@ -10,7 +10,7 @@ python3 libffi openssl \
 && chown -R jenkins:jenkins /home/jenkins
 # dotnet sdk
 ADD https://dot.net/v1/dotnet-install.sh .
-RUN chmod +x ./dotnet-install.sh && sh ./dotnet-install.sh -c Current
+RUN chmod +x ./dotnet-install.sh && bash ./dotnet-install.sh -c Current
 # powershell
 RUN apk -X https://dl-cdn.alpinelinux.org/alpine/edge/main add --no-cache lttng-ust \
 && curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-7.0.3-linux-alpine-x64.tar.gz -o /tmp/powershell.tar.gz \
