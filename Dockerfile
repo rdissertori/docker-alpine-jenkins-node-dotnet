@@ -19,5 +19,6 @@ RUN apk -X https://dl-cdn.alpinelinux.org/alpine/edge/main add --no-cache lttng-
 && chmod +x /opt/microsoft/powershell/7/pwsh \
 && ln -s /opt/microsoft/powershell/7/pwsh /usr/bin/pwsh
 # azure cli
-RUN curl -L https://aka.ms/InstallAzureCli | bash
+COPY az_cli_install .
+RUN chmod +x az_cli_install.sh && bash az_cli_install.sh
 USER jenkins
