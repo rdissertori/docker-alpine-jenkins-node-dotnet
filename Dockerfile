@@ -3,7 +3,7 @@ FROM rdissertori/alpine-jenkins-node-base
 ENV DOTNET_CLI_TELEMETRY_OPTOUT 1
 
 USER root
-RUN apk add --update --no-cache icu-libs krb5-libs libgcc libintl libssl1.1 libstdc++ zlib \
+RUN apk add --update --no-cache bash icu-libs krb5-libs libgcc libintl libssl1.1 libstdc++ zlib \
 ca-certificates less ncurses-terminfo-base tzdata userspace-rcu curl \
 python3 libffi openssl \
 && rm -rf /tmp/* \
